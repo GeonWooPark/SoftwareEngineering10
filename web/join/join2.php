@@ -96,7 +96,7 @@
 
 					<!-- 비밀번호-->
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="패스워드">
+						<input class="input100" type="password" name="pass" placeholder="패스워드" id="password">
 						<span class="focus-input100"></span>
 					</div>
 					<h5>
@@ -106,7 +106,7 @@
 
 					<!-- 비밀번호 확인-->
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass2" placeholder="패스워드 확인">
+						<input class="input100" type="password" name="pass2" placeholder="패스워드 확인" id="password_check">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -231,7 +231,7 @@
 				document.getElementById('pwsame').innerHTML = '비밀번호가 맞지 않습니다.';
 				return false;
 			}
-
+			
 			if(!pattern1.test(pw)||!pattern2.test(pw)||!pattern3.test(pw)||pw.length<8||pw.length>50){
 
 				alert("영문+숫자+특수기호 8자리 이상으로 구성하여야 합니다.");
