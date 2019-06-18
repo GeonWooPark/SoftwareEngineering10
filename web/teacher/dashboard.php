@@ -3,10 +3,12 @@
 	$link = connect_db($host,$dbid,$dbpw,$dbname);
 	mysqli_set_charset($link,"utf8");
 ?>
-
-
 <!DOCTYPE HTML>
-
+<!--
+	VOICEYOU by LEE JU HYEONG
+	see2818@naver.com
+	hello world!
+-->
 <html lang="ko">
 	<head>
 		<title>VOICE YOU</title>
@@ -302,6 +304,12 @@
 
 
 
+
+
+
+
+
+			
 
 	</body>
 </html>

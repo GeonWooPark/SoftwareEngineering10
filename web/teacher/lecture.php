@@ -4,7 +4,11 @@
 	mysqli_set_charset($link,"utf8");
 ?>
 <!DOCTYPE HTML>
-
+<!--
+	VOICEYOU by LEE JU HYEONG
+	see2818@naver.com
+	hello world!
+-->
 <html lang="ko">
 	<head>
 		<title>VOICE YOU</title>
@@ -145,8 +149,12 @@
 						$id = $strTok[2];
 						$date = $strTok[3];
 
-						$select_query1 = "SELECT * FROM Lecture where id='$id' and category='$category' and date='$date'"; 
+						$select_query1 = "SELECT * FROM Lecture where id='$id' and date='$date'"; 
 						$result_set1 = mysqli_query($link, $select_query1);
+
+
+
+
 
 						$row1 = mysqli_fetch_array($result_set1);
 					?>
@@ -220,7 +228,14 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../assets/js/main.js"></script>
 
-		
+
+
+
+
+
+
+
+			
 
 	</body>
 </html>

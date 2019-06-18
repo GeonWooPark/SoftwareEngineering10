@@ -253,7 +253,7 @@
 								<img src="images/teach6.jpg" width="320" height="180" alt="" />
 								<h3>이병헌 선생님</h3>
 								<p>광고 찍을 때는 항상 이런 목소리로! <br>(2주 과정)</p>
-								<a href="#" class="button">Read More</a>
+								<a href="lecture/user_dashboard.php?tea" class="button">Read More</a>
 							</div>
 						</div>
 						<div class="boxC">

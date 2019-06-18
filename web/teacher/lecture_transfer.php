@@ -15,9 +15,9 @@ $file_Name = basename($_FILES["v_uploaded_file"]["name"]);
 $title = $_POST['title'];
 $contents = $_POST['contents'];
 //$script = $_POST['script'];
-echo "<script>alert(\"<php? printf($contents);\");</script>";
-echo "<script>alert(\"<php? printf($title);\");</script>";
-echo "<script>alert(\"<php? printf($file_Name);\");</script>";
+//echo "<script>alert(\"<php? printf($contents);\");</script>";
+//echo "<script>alert(\"<php? printf($title);\");</script>";
+//echo "<script>alert(\"<php? printf($file_Name);\");</script>";
 //$strTok =explode(':' , $script);
 //$chart_id=$strTok[0];
 //$category=$strTok[2];
@@ -31,7 +31,7 @@ echo "<script>alert(\"<php? printf($file_Name);\");</script>";
    // COUNT가 1보다 작으면 일치하는 데이터가 없으므로 
    if($count < 1){
 
- echo "link before s3 put!!!"; 
+// echo "link before s3 put!!!"; 
 
 $bucket = 'hyeong'; // S3 bucket name
        
@@ -39,11 +39,11 @@ $s3 = new S3Client([
     'version' => 'latest',
     'region'  => 'ap-northeast-2',
     'credentials' => [
-    	'key' => 'AKIAIONBMQ2HHPWT6D6Q', // access key
-    	'secret' => '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', // secret key
+    	'key' => 'AKIAYZH42MOABZGB7H6Q', // access key
+    	'secret' => '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', // secret key
     ],
 ]);
-echo "before s3 put!!!";
+//echo "before s3 put!!!";
 try {
     // Upload data.
     $result = $s3->putObject([
@@ -53,18 +53,18 @@ try {
         'ContentType'=>$_FILES['v_uploaded_file']['type'],  //업로드 파일의 MIME 타입
         'ACL'    => 'public-read' // only read
     ]);
-echo "after result";
+//echo "after result";
 //	chmod($_FILES['uploaded_file']['tmp_name'],0777);
     @unlink($_FILES['v_uploaded_file']['tmp_name']); //bitnami php 경로에 올린 uploaded file 임시 파일을 삭제해주는 코드. "@ 붙여주니 구동!"
 	$resultArray = $result->toArray();
 	//var_dump($resultArray['ObjectURL']);
 	//echo "//before getObjectUrl";
 	$url = $s3->getObjectUrl($bucket, $_FILES["v_uploaded_file"]["name"]);
-	echo "after getObjectUrl";
+//	echo "after getObjectUrl";
     // Print the URL to the object.
     //echo $result['ObjectURL'] . PHP_EOL;
 } catch (S3Exception $e) {
-   echo $e->getMessage() . PHP_EOL;
+ //  echo $e->getMessage() . PHP_EOL;
 }
 
 
@@ -76,8 +76,8 @@ $File_name2 = urlencode($file_Name);
 
 $File_URL = "https://s3.ap-northeast-2.amazonaws.com/hyeong/".$File_name2;
 
-echo "<script>alert(\"<php? printf($File_URL);\");</script>";
-	$today = date("Y-m-d(H:i:s)"); //현재 날짜 저장
+//echo "<script>alert(\"<php? printf($File_URL);\");</script>";
+	$today = date("Y-m-d"); //현재 날짜 저장
 	
 $link2 = connect_db($host, $dbid, $dbpw, $dbname);
 ///echo "111";
@@ -85,6 +85,10 @@ mysqli_set_charset($link2, "utf8");
 $sql2 = "INSERT INTO Lecture (id, title, video_file_address, date,content_text) VALUES ('$id','$title','$File_URL','$today','$contents')";
 ///echo "222";
 $result2 = mysqli_query($link2,$sql2);
+//if($result2)
+//    echo ("<script language=javascript> alert('회원 등록을 완료하였습니다.');</script>");
+//else
+//    echo mysqli_error($link2);
 mysqli_close($link2);
 
 
