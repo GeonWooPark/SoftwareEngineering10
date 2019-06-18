@@ -33,7 +33,7 @@ echo "<script>alert(\"<php? printf($file_Name);\");</script>";
 
  echo "link before s3 put!!!"; 
 
-$bucket = 'storytoyou'; // S3 bucket name
+$bucket = 'hyeong'; // S3 bucket name
        
 $s3 = new S3Client([
     'version' => 'latest',
@@ -74,7 +74,7 @@ echo "after result";
 
 $File_name2 = urlencode($file_Name);
 
-$File_URL = "https://s3.ap-northeast-2.amazonaws.com/storytoyou/".$File_name2;
+$File_URL = "https://s3.ap-northeast-2.amazonaws.com/hyeong/".$File_name2;
 
 echo "<script>alert(\"<php? printf($File_URL);\");</script>";
 	$today = date("Y-m-d(H:i:s)"); //현재 날짜 저장
