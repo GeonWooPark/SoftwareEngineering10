@@ -150,11 +150,11 @@
 					<?php
 						if($count == 0) {
 					?>
-					<li><a href="#"><img src="images/notification1.png" alt="알림" style="width: auto; height: 1.25em; vertical-align:middle;" >&nbsp;Notification</a><li>
+					<li><a href="#"><img src="../images/notification1.png" alt="알림" style="width: auto; height: 1.25em; vertical-align:middle;" >&nbsp;Notification</a><li>
 					<?php
 						}else {
 					?>
-					<li><a href="#"><?php echo $count; ?><img src="images/notification2.png" alt="알림" style="width: auto; height: 1.25em; vertical-align:middle;" >&nbsp;Notification</a><li>
+					<li><a href="#"><?php echo $count; ?><img src="../images/notification2.png" alt="알림" style="width: auto; height: 1.25em; vertical-align:middle;" >&nbsp;Notification</a><li>
 					<?php
 						}
 					?>
