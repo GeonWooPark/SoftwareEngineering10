@@ -142,7 +142,7 @@
 				<h2>VOICE YOU</h2>
 				<p>우리는 말합니다. 우리는 듣습니다. 우리는 배웁니다.  <br><br>VOICE YOU에서 즐겨봅시다!</p>
 				<ul class="actions">
-					<li><a href="broadcast/index.html" class="button big special" style="background-color:#ffdf00">Learn More</a></li>
+					<li><a href="#" class="button big special" style="background-color:#ffdf00">Learn More</a></li>
 				</ul>
 			</section>
 
