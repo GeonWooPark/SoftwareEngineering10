@@ -150,11 +150,11 @@
 					<?php
 						if($count == 0) {
 					?>
-					<li><a href="#"><img src="../images/notification1.png" alt="알림" style="width: auto; height: 1.25em; vertical-align:middle;" >&nbsp;Notification</a><li>
+					<li><a href="#"><img src="images/notification1.png" alt="알림" style="width: auto; height: 1.25em; vertical-align:middle;" >&nbsp;Notification</a><li>
 					<?php
 						}else {
 					?>
-					<li><a href="#"><?php echo $count; ?><img src="../images/notification2.png" alt="알림" style="width: auto; height: 1.25em; vertical-align:middle;" >&nbsp;Notification</a><li>
+					<li><a href="#"><?php echo $count; ?><img src="images/notification2.png" alt="알림" style="width: auto; height: 1.25em; vertical-align:middle;" >&nbsp;Notification</a><li>
 					<?php
 						}
 					?>
@@ -198,9 +198,10 @@
 
 
 					<div class="example" style="padding: 6% 5% 5%; border: 1px solid #ccc;">Script<br><br><?php echo $row['script']; ?></div>
-
+<!--
   					<hr>
 					
+
   					<h3>녹음</h3>
 					  <p style="line-height:2em;">녹음시작 버튼을 누르면 녹음이 시작됩니다.<br>
 					  정지버튼을 누르면 녹음이 중지됩니다.<br>
@@ -226,27 +227,27 @@
 						</div>
 					
 						<div>
-							
-						<!--녹음-->						
+-->							
+						<!--녹음-->		<!--				
 							<button type="button" class="buttona" id="onoff" onclick="button_onclick();" style="min-width:95px;">
 								녹음시작
-							</button>
-						<!--정지-->
+							</button>    -->
+						<!--정지-->      <!--
 						  	<button type="button" class="buttonb" onclick="button_onclick3();" style="min-width:95px;"> 
 								정지
-							</button>
-						<!--재생-->
+							</button>    -->
+						<!--재생-->       <!--
 							<button  type="button" class="buttonc" id="play" onclick="button_onclick2(this.id);" style="min-width:95px;">
 								들어보기
-							</button>
-						<!--다운-->
+							</button>     -->
+						<!--다운-->       <!--
 							<button type="button" class="buttond"  style="min-width:95px;">
 								다운로드
-							</button>
+							</button>    
 						</div>
 					</div>
-					
-					<hr>
+											-->
+					<hr>     				
 
 					<div class="form_01">     
 						<!--<form name="fwrite" id="fwrite" action="" onsubmit="" method="post"> -->
