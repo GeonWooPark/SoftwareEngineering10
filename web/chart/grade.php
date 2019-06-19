@@ -4,7 +4,11 @@
 	mysqli_set_charset($link,"utf8");
 ?>
 <!DOCTYPE HTML>
-
+<!--
+	VOICEYOU by LEE JU HYEONG
+	see2818@naver.com
+	hello world!
+-->
 <html lang="ko">
 	<head>
 		<title>VOICE YOU</title>
@@ -333,6 +337,8 @@ star-input5>.input5.focus{outline:1px dotted #ddd;}
 										목소리의 평균 평점
 									</h3>
 
+									
+
 
 									<div class=info2>
 										<table style="width:400px; float:right;">
@@ -414,6 +420,13 @@ star-input5>.input5.focus{outline:1px dotted #ddd;}
 
 
 
+
+
+
+
+
+
+
 								<?php
 									}else {//전문가 등록이 되어있다.
 								?>
@@ -485,7 +498,7 @@ star-input5>.input5.focus{outline:1px dotted #ddd;}
 									<h4>평가 및 코멘트 등록</h4>
 
 									<form action="graph_point_update.php" onsubmit="" method="post" autocomplete="off" class="comment1">
-										<textarea required title="댓글 내용" placeholder="댓글 내용을 입력해주세요"></textarea>
+										<textarea required title="댓글 내용" name="wr_content" placeholder="댓글 내용을 입력해주세요"></textarea>
 										<div class="comment2">
 											<div class="comment3">
 												<div class="comment4">
@@ -647,7 +660,7 @@ star-input5>.input5.focus{outline:1px dotted #ddd;}
 						$temp=$row1["user_id"];//이 게시글의 작성자
  					?>
  					
-					<li style="height:200px;">
+					<li style="height:250px;">
 						<?php if(($getid==$row1["user_id"]) and ($row1["Seen"]==1) and !($getid==$row1["ID"])){?> 
 						<div style="float:right; font-size: 13px;"> &nbsp신규</div> 
 						<?php
@@ -715,6 +728,11 @@ star-input5>.input5.focus{outline:1px dotted #ddd;}
 			
 
 </div>
+
+
+
+
+
 
 
 
@@ -835,6 +853,7 @@ star-input5>.input5.focus{outline:1px dotted #ddd;}
 					}
 				});
 
+
 			
 				function audio_play_pause(id)
 				{
@@ -864,6 +883,15 @@ star-input5>.input5.focus{outline:1px dotted #ddd;}
 
 			</script>
 							
+
+			
+
+
+
+
+
+
+
 
 
 	</body>
