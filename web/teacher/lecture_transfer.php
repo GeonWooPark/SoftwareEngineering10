@@ -14,6 +14,7 @@ $id = $_SESSION['id']; // 세션에 저장되어 있는 id 불러옴
 $file_Name = basename($_FILES["v_uploaded_file"]["name"]);
 $title = $_POST['title'];
 $contents = $_POST['contents'];
+$category = $_POST['category'];
 //$script = $_POST['script'];
 //echo "<script>alert(\"<php? printf($contents);\");</script>";
 //echo "<script>alert(\"<php? printf($title);\");</script>";
@@ -82,7 +83,7 @@ $File_URL = "https://s3.ap-northeast-2.amazonaws.com/hyeong/".$File_name2;
 $link2 = connect_db($host, $dbid, $dbpw, $dbname);
 ///echo "111";
 mysqli_set_charset($link2, "utf8");
-$sql2 = "INSERT INTO Lecture (id, title, video_file_address, date,content_text) VALUES ('$id','$title','$File_URL','$today','$contents')";
+$sql2 = "INSERT INTO Lecture (id, title, video_file_address, date,content_text, category) VALUES ('$id','$title','$File_URL','$today','$contents','$category')";
 ///echo "222";
 $result2 = mysqli_query($link2,$sql2);
 //if($result2)

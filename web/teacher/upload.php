@@ -186,6 +186,14 @@
 						<span class="focus-input100"></span>
 					</div>
 
+					<p style="margin:0px;">
+					강의 카테고리
+					</p>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter your message">
+						<textarea class="input100" name="category" placeholder="Your Message"></textarea>
+						<span class="focus-input100"></span>
+					</div>
+
 
 					<p style="margin:0px;">
 					강의 소개 내용
@@ -217,6 +225,13 @@
 	
 
 	<div id="dropDownSelect1"></div>
+
+
+
+
+
+
+
 
 
 	<!-- Footer -->
